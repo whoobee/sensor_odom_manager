@@ -1,0 +1,18 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+    <arg name="odom_in_topic"         default="/t265/odom/sample"/>
+    <arg name="odom_out_topic"        default="/odom"/>
+    <arg name="odom_out_frame"        default="odom"/>
+    <arg name="output"                default="screen"/>
+    <arg name="rs_offset"             default='{"x": 0.307, "y": 0.000, "z": 0.210}'/>
+
+    
+
+    <node pkg="rs_odom_manager" type="rs_odom_manager_node.py" name="odom_manager" ns="rs_odom_mngr" 
+            output="$(arg output)">
+        <param name="odom_in_topic"         value="$(arg odom_in_topic)"/>
+        <param name="odom_out_topic"        value="$(arg odom_out_topic)"/>
+        <param name="odom_out_frame"        value="$(arg odom_out_frame)"/>
+        <param name="rs_offset"             value="$(arg rs_offset)"/>
+    </node>
+</launch>
