@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rs_odom_manager</name>
+  <name>sensor_odom_manager</name>
   <version>0.0.0</version>
-  <description>The rs_odom_manager package</description>
+  <description>The sensor_odom_manager package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/rs_odom_manager</url> -->
+  <!-- <url type="website">http://wiki.ros.org/sensor_odom_manager</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->

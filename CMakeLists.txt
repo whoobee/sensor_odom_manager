@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(rs_odom_manager)
+project(sensor_odom_manager)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -106,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES rs_odom_manager
+#  LIBRARIES sensor_odom_manager
 #  CATKIN_DEPENDS diagnostic_msgs diagnostic_updater geometry_msgs rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -124,7 +124,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/rs_odom_manager.cpp
+#   src/${PROJECT_NAME}/sensor_odom_manager.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -135,7 +135,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/rs_odom_manager_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/sensor_odom_manager_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -199,7 +199,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_rs_odom_manager.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_sensor_odom_manager.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

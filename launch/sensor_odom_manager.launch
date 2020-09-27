@@ -1,0 +1,31 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+    <!-- sensor input data -->
+    <arg name="odom_in_topic"         default="/t265/odom/sample"/>
+    <!-- name of the odom topic outputed by the node -->
+    <arg name="odom_out_topic"        default="/odom"/>
+    <!-- name of the odom tf outputed by the node -->
+    <arg name="odom_out_frame"        default="odom"/>
+    <!-- sensor offset values are in meters -->
+    <arg name="sensor_offset"         default='{"x": 0.307, "y": 0.000, "z": 0.210}'/>
+    <!-- sensor rotation values are in degrees -->
+    <arg name="sensor_rotation"       default='{"x": 0.000, "y": 0.000, "z": 0.000}'/>
+    <!-- ignore x coordonate - value is CAPS sensitive (True/False) -->
+    <arg name="ignore_x"              default='False'/>
+    <!-- ignore y coordonate - value is CAPS sensitive (True/False) -->
+    <arg name="ignore_y"              default='False'/>
+    <!-- ignore z coordonate - value is CAPS sensitive (True/False) -->
+    <arg name="ignore_z"              default='True'/>
+
+    <node pkg="sensor_odom_manager" type="sensor_odom_manager_node.py" name="odom_manager" ns="sensor_odom_mngr" 
+            output="screen">
+        <param name="odom_in_topic"         value="$(arg odom_in_topic)"/>
+        <param name="odom_out_topic"        value="$(arg odom_out_topic)"/>
+        <param name="odom_out_frame"        value="$(arg odom_out_frame)"/>
+        <param name="sensor_offset"         value="$(arg sensor_offset)"/>
+        <param name="sensor_rotation"       value="$(arg sensor_rotation)"/>
+        <param name="ignore_x"              value="$(arg ignore_x)"/>
+        <param name="ignore_y"              value="$(arg ignore_y)"/>
+        <param name="ignore_z"              value="$(arg ignore_z)"/>
+    </node>
+</launch>

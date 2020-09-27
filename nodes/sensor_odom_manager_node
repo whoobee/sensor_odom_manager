@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 from __future__ import print_function
 
+# standard ros imports
 import rospy
-import rs_odom_manager
+import sensor_odom_manager
 
+# entry point
 if __name__ == '__main__':
     try:
-        rs_odom_manager.start_manager()
+        # start the sensor manager
+        sensor_odom_manager.start_manager()
     except rospy.ROSInterruptException:
         pass
