@@ -144,7 +144,7 @@ class SensorOdomManager(object):
                                                                                 np.radians(-self.sensor_rotation["z"]))
                 # rotate sensor tf
                 qtRot = tf.transformations.quaternion_multiply(qtSensorAdjustmentTool, self.qtAdjustedRot)
-                self.qtAdjustedRot = tf.transformations.quaternion_multiply(qtRot, tf.transformations.quaternion_inverse(qtSensorAdjustment))
+                self.qtAdjustedRot = tf.transformations.quaternion_multiply(qtRot, tf.transformations.quaternion_inverse(qtSensorAdjustmentTool))
             # get the euler angles from pose quaternion
             self.rpy = tf.transformations.euler_from_quaternion(self.qtAdjustedRot)
             # calculate translations
